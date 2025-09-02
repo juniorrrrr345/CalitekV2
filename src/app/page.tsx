@@ -2,7 +2,7 @@
 import { useState, useEffect, useLayoutEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
-// Redéploiement forcé - Nouveau chargement CALIWHITE
+// Redéploiement forcé - Nouveau chargement CALITEK
 import CategoryFilter from '../components/CategoryFilter';
 import ProductCard, { Product } from '../components/ProductCard';
 import ProductDetail from '../components/ProductDetail';
@@ -158,7 +158,7 @@ export default function HomePage() {
         setFarms(['Toutes les farms', ...farmsData.map((f: any) => f.name)]);
       }
     } catch (error) {
-      console.error('❌ Erreur chargement CALIWHITE:', error);
+      console.error('❌ Erreur chargement CALITEK:', error);
       setProducts([]);
       setCategories(['Toutes les catégories']);
       setFarms(['Toutes les farms']);
@@ -252,14 +252,14 @@ export default function HomePage() {
               <div className="mb-8">
                 <img 
                   src={settings?.backgroundImage || "https://pub-b38679a01a274648827751df94818418.r2.dev/images/background-oglegacy.jpeg"}
-                  alt="CALIWHITE" 
+                  alt="CALITEK" 
                   className="h-32 sm:h-40 md:h-48 w-32 sm:w-40 md:w-48 mx-auto rounded-xl object-cover border-4 border-white/20"
                   style={{ filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))' }}
                 />
               </div>
               
               <p className="text-2xl text-white mb-8 font-semibold drop-shadow-lg animate-pulse">
-                CALIWHITE
+                CALITEK
               </p>
               
               {/* Nouvelle barre de chargement style néon */}
@@ -269,7 +269,7 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></div>
                   </div>
                 </div>
-                <div className="mt-2 text-sm text-blue-300 font-medium drop-shadow-md animate-pulse">Chargement de CALIWHITE...</div>
+                <div className="mt-2 text-sm text-blue-300 font-medium drop-shadow-md animate-pulse">Chargement de CALITEK...</div>
               </div>
               
               {/* Animation de particules style diamant */}
@@ -281,7 +281,7 @@ export default function HomePage() {
               
               {/* Footer */}
               <div className="text-white text-sm font-medium drop-shadow-md">
-                <p>CALIWHITE</p>
+                <p>CALITEK</p>
               </div>
             </div>
           </div>

@@ -59,7 +59,7 @@ export default function SocialPageClient() {
             </h1>
             <div className="w-20 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-4"></div>
             <p className="text-white text-lg">
-              Rejoignez <span className="text-yellow-400">{settings?.shop_name || 'CALIWHITE'}</span> sur nos réseaux sociaux
+              Rejoignez <span className="text-yellow-400">{settings?.shop_name || 'CALITEK'}</span> sur nos réseaux sociaux
             </p>
           </div>
 

@@ -43,7 +43,7 @@ export async function POST(request: Request) {
     
     const data = await executeSqlOnD1(
       'INSERT INTO farms (name, description, location, contact, created_at) VALUES (?, ?, ?, ?, datetime("now")) RETURNING *',
-      [name, description || 'Farm CALIWHITE', location || 'Non spécifié', contact || 'contact@oglegacy.com']
+      [name, description || 'Farm CALITEK', location || 'Non spécifié', contact || 'contact@oglegacy.com']
     );
     
     if (data.success && data.result?.[0]?.results?.[0]) {

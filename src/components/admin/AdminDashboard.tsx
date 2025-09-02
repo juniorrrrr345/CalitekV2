@@ -53,8 +53,8 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
         {/* Sidebar Desktop avec style ÎLE DE FRANCE FULL OPTION */}
         <aside className="w-72 bg-black/90 backdrop-blur-sm border-r border-white/20 min-h-screen fixed left-0 top-0 z-50">
           <div className="p-6 border-b border-white/20">
-            <h1 className="text-2xl font-black text-white tracking-wider">CALIWHITE</h1>
-            <p className="text-gray-400 text-xs mt-1 uppercase tracking-[0.2em] font-medium">Panel Admin - CALIWHITE</p>
+            <h1 className="text-2xl font-black text-white tracking-wider">CALITEK</h1>
+            <p className="text-gray-400 text-xs mt-1 uppercase tracking-[0.2em] font-medium">Panel Admin - CALITEK</p>
           </div>
           <nav className="p-4">
             <div className="space-y-3">
@@ -101,8 +101,8 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
           <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-white/20">
             <div className="flex items-center justify-between p-4">
               <div>
-                <h1 className="text-lg font-black text-white tracking-wider">CALIWHITE</h1>
-                <p className="text-gray-400 text-xs uppercase tracking-[0.2em] font-medium">Panel Admin - CALIWHITE</p>
+                <h1 className="text-lg font-black text-white tracking-wider">CALITEK</h1>
+                <p className="text-gray-400 text-xs uppercase tracking-[0.2em] font-medium">Panel Admin - CALITEK</p>
               </div>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -178,8 +178,8 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
         <div className="hidden sm:flex lg:hidden h-screen">
           <aside className="w-64 bg-black/90 backdrop-blur-sm border-r border-white/20 min-h-screen overflow-y-auto">
             <div className="p-4 border-b border-white/20">
-              <h1 className="text-lg font-black text-white tracking-wider">CALIWHITE</h1>
-              <p className="text-gray-400 text-xs mt-1 uppercase tracking-[0.2em] font-medium">Panel Admin - CALIWHITE</p>
+              <h1 className="text-lg font-black text-white tracking-wider">CALITEK</h1>
+              <p className="text-gray-400 text-xs mt-1 uppercase tracking-[0.2em] font-medium">Panel Admin - CALITEK</p>
             </div>
             <nav className="p-3">
               <div className="space-y-2">

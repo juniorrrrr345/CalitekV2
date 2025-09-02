@@ -416,7 +416,7 @@ export default function SettingsManager() {
                   settings.titleStyle === 'graffiti' ? 'text-yellow-400 drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] transform rotate-1' :
                   ''
                 }`}>
-                  {settings.shopTitle || 'CALIWHITE'}
+                  {settings.shopTitle || 'CALITEK'}
                 </h1>
                 <p className="text-gray-400 text-xs mt-1 uppercase tracking-[0.2em] font-medium">
                   Boutique Premium

@@ -95,7 +95,7 @@ class ContentCache {
 
   getDefaultSettings() {
     return {
-      shopName: 'CALIWHITE',
+      shopName: 'CALITEK',
       shopDescription: 'Boutique en ligne moderne',
       backgroundImage: '',
       backgroundOpacity: 20,

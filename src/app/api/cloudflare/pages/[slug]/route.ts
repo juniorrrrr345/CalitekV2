@@ -45,16 +45,16 @@ export async function GET(
       
       switch (params.slug) {
         case 'info':
-          defaultTitle = 'À propos d\'CALIWHITE';
-          defaultContent = 'Bienvenue chez CALIWHITE - Votre boutique premium de produits d\'exception.';
+          defaultTitle = 'À propos d\'CALITEK';
+          defaultContent = 'Bienvenue chez CALITEK - Votre boutique premium de produits d\'exception.';
           break;
         case 'contact':
-          defaultTitle = 'Contact CALIWHITE';
-          defaultContent = 'Contactez-nous pour toute question concernant nos produits CALIWHITE.';
+          defaultTitle = 'Contact CALITEK';
+          defaultContent = 'Contactez-nous pour toute question concernant nos produits CALITEK.';
           break;
         default:
-          defaultTitle = 'Page CALIWHITE';
-          defaultContent = 'Contenu de la page CALIWHITE.';
+          defaultTitle = 'Page CALITEK';
+          defaultContent = 'Contenu de la page CALITEK.';
       }
       
       const defaultPage = {
