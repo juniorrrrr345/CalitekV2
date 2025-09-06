@@ -89,19 +89,30 @@ export default function ProductDetail({ product, onClose }: ProductDetailProps) 
 
         {/* Contenu scrollable avec padding bottom pour éviter que le contenu soit caché */}
         <div className="w-full h-full overflow-y-auto pb-20">
-          {/* Image ou vidéo - affichage direct */}
+          {/* Image ou vidéo - support MP4 et iframe Cloudflare */}
           <div className="relative w-full aspect-square bg-black">
             {product.video_url ? (
-              <video 
-                src={product.video_url}
-                className="w-full h-full object-contain"
-                controls
-                muted
-                playsInline
-              >
-                <source src={product.video_url} type="video/mp4" />
-                Vidéo non supportée
-              </video>
+              (product.video_url.includes('iframe.videodelivery') || product.video_url.includes('cloudflarestream.com')) ? (
+                <iframe
+                  src={product.video_url}
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                  allowFullScreen
+                  title="Vidéo produit"
+                />
+              ) : (
+                <video 
+                  src={product.video_url}
+                  className="w-full h-full object-contain"
+                  controls
+                  muted
+                  playsInline
+                >
+                  <source src={product.video_url} type="video/mp4" />
+                  Vidéo non supportée
+                </video>
+              )
             ) : product.image_url ? (
               <img 
                 src={product.image_url}

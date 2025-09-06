@@ -1113,18 +1113,29 @@ export default function ProductsManager() {
                       placeholder="URL complète de la vidéo (https://...)"
                     />
                     
-                    {/* Aperçu de la vidéo direct */}
+                    {/* Aperçu de la vidéo direct (support MP4 & iframe) */}
                     {formData.video_url && (
                       <div className="mt-3">
                         <div className="text-xs text-gray-400 mb-2">Aperçu :</div>
                         <div className="w-32 h-20 rounded border border-white/20 overflow-hidden">
-                          <video 
-                            src={formData.video_url} 
-                            className="w-full h-full object-cover"
-                            controls
-                            muted
-                            preload="metadata"
-                          />
+                          {(formData.video_url.includes('iframe.videodelivery') || formData.video_url.includes('cloudflarestream.com')) ? (
+                            <iframe
+                              src={formData.video_url}
+                              className="w-full h-full"
+                              frameBorder="0"
+                              allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                              allowFullScreen
+                              title="Aperçu vidéo"
+                            />
+                          ) : (
+                            <video 
+                              src={formData.video_url} 
+                              className="w-full h-full object-cover"
+                              controls
+                              muted
+                              preload="metadata"
+                            />
+                          )}
                         </div>
                       </div>
                     )}
@@ -1351,12 +1362,23 @@ export default function ProductsManager() {
                         placeholder="URL complète de la vidéo (https://...)"
                       />
                       {formData.video_url && (
-                        <video 
-                          src={formData.video_url} 
-                          className="w-32 h-20 object-cover rounded border border-white/20 mt-2"
-                          controls
-                          muted
-                        />
+                        (formData.video_url.includes('iframe.videodelivery') || formData.video_url.includes('cloudflarestream.com')) ? (
+                          <iframe
+                            src={formData.video_url}
+                            className="w-32 h-20 object-cover rounded border border-white/20 mt-2"
+                            frameBorder="0"
+                            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                            allowFullScreen
+                            title="Aperçu vidéo"
+                          />
+                        ) : (
+                          <video 
+                            src={formData.video_url} 
+                            className="w-32 h-20 object-cover rounded border border-white/20 mt-2"
+                            controls
+                            muted
+                          />
+                        )
                       )}
                     </div>
                   </div>
