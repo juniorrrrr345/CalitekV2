@@ -46,13 +46,13 @@ export const d1Simple = {
 
   // Récupérer toutes les catégories
   async getCategories() {
-    const result = await executeD1Query('SELECT * FROM categories ORDER BY name ASC');
+    const result = await executeD1Query('SELECT * FROM categories ORDER BY id ASC');
     return result.result?.[0]?.results || [];
   },
 
   // Récupérer toutes les farms
   async getFarms() {
-    const result = await executeD1Query('SELECT * FROM farms ORDER BY name ASC');
+    const result = await executeD1Query('SELECT * FROM farms ORDER BY id ASC');
     return result.result?.[0]?.results || [];
   },
 
