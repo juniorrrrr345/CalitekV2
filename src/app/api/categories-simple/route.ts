@@ -24,7 +24,7 @@ async function executeSqlOnD1(sql: string, params: any[] = []) {
 
 export async function GET() {
   try {
-    const data = await executeSqlOnD1('SELECT id, name, icon, color, created_at FROM categories ORDER BY name ASC');
+    const data = await executeSqlOnD1('SELECT id, name, icon, color, created_at FROM categories ORDER BY id ASC');
     
     if (data.success && data.result?.[0]?.results) {
       return NextResponse.json(data.result[0].results);

@@ -25,7 +25,7 @@ async function executeSqlOnD1(sql: string, params: any[] = []) {
 // GET - Récupérer toutes les catégories pour le panel admin
 export async function GET() {
   try {
-    const data = await executeSqlOnD1('SELECT * FROM categories ORDER BY name ASC');
+    const data = await executeSqlOnD1('SELECT * FROM categories ORDER BY id ASC');
     
     if (data.success && data.result?.[0]?.results) {
       const categories = data.result[0].results.map((category: any) => ({
